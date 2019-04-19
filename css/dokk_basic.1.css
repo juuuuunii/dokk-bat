@@ -1,0 +1,94 @@
+/**** header ****/
+#wrap {width: 100%; position: relative; overflow: hidden; word-break: keep-all;}
+#wrap .header {width: 100%; padding: 0 3%; position: fixed; top: 5%; z-index: 12;}
+
+/** menu toggle **/
+#bars {cursor: pointer; position: absolute; top: 0; left: 3%; width: 45px;}
+.bar {
+	width: 45px;
+	height: 7px;
+	background-color: #f9b419;
+	border-radius: 7px;
+	margin-bottom: 7px; 
+	transition: all .3s ease-in-out;
+}
+#bars.on .bar1 {transform: translate(0,14px) rotate(45deg);}
+#bars.on .bar2 {opacity: 0;}
+#bars.on .bar3 {transform: translate(0,-14px) rotate(-45deg);}
+#bars > p {color: #f9b419; font-weight: 500;}
+
+/** header top **/
+#wrap .header h2 .logo {max-width: 300px; display: block; position: absolute; left: 50%; transform: translateX(-50%);}
+#wrap .header .languege {position: absolute; top: 0; right: 3%; width: 97px; height: 16px;}
+#wrap .header .languege > div {display: inline-block; margin-left: 10px; font-size: 20px; cursor: pointer;}
+#wrap .header .languege > :first-child {color: #f9b419; font-weight: 500;}
+
+
+
+
+/**** main ****/
+#wrap .main {width: 100%; height: 100vh; position: relative; overflow: hidden;}
+#wrap .main .mainBox {width: 100%; height: 100%; position: relative;}
+#wrap .bg {width: 100%; height: 100%; background: url('../img/main/bg2.jpg') center center / cover no-repeat;}
+
+/** main 텍스트 **/
+#wrap .main .txtArea {width: 100%; position: absolute; top: 50%; transform: translateY(-50%); text-align: center; padding: 0 5%;}
+#wrap .main .slogan {
+    font-family: 'Noto Sans KR';
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 75px;
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    top: 35px;
+    transition: opacity .8s cubic-bezier(.55,0,.1,1), top .8s cubic-bezier(.55,0,.1,1);
+}
+#wrap .main .tit {
+    font-family: 'Noto Sans KR'; 
+    font-weight: 300;
+    font-size: 26px;
+    color: #fff;
+    margin-top: 25px !important;
+    position: relative;
+    opacity: 0;
+    top: -35px;
+    transition: opacity .8s cubic-bezier(.55,0,.1,1), top .8s cubic-bezier(.55,0,.1,1);
+}
+#wrap .bt_wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	bottom: 5%;
+	font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+/** main 텍스트 애니메이션 **/
+#wrap .txtArea.on .slogan {opacity: 1; top: 0;}
+#wrap .txtArea.on .tit {opacity: 1; top: 0;}
+
+#wrap .main .line {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+#wrap .main .line span {
+    width: 1px;
+    height: 0;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    display: block;
+}
+
+
+/**** mainCon ****/
+#wrap .mainCon {background: #fff; display: none;}
+#wrap .mainCon .siteInfo {width: 75%; margin: 0 auto; position: relative;}
+#wrap .mainCon .siteInfo .infoImg {width: 100%; position: relative; opacity: 0; z-index: 1;}
+#wrap .mainCon .info {margin-top: 150px; position: relative;}

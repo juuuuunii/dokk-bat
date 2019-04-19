@@ -1,0 +1,209 @@
+/* ========== [header] ========== */
+header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index: 5;}
+
+/** languege **/
+.languege {position: fixed; top: 40px; right: 50px; z-index: 5;}
+.languege li {float: left;margin-left: 20px;}
+.languege li a {color: rgba(0,0,0,0.5);transition: all 0.5s;}
+.languege li a:hover {text-decoration: underline;color: rgba(0,0,0,1)}
+
+/** gnb **/
+.mainNavi {position: fixed;top: 50%;left: 0;margin-top: -100px;z-index: 5}
+.mainNavi a {
+    display: block;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+.mainNavi li:first-child {display: none;}
+.mainNavi li a:hover {font-size: 20px;opacity: 1;}
+.mainNavi li.on a {font-size: 20px;opacity: 1;}
+
+.mainNavi li:nth-child(1) a:hover {color: #f8b418;}
+.mainNavi li:nth-child(2) a:hover {color: #c40000;}
+.mainNavi li:nth-child(3) a:hover {color: #755232;}
+.mainNavi li:nth-child(4) a:hover {color: #1e69e2;}
+
+.mainNavi li:nth-child(1).on a {color: #f8b418;}
+.mainNavi li:nth-child(2).on a {color: #c40000;}
+.mainNavi li:nth-child(3).on a {color: #755232;}
+.mainNavi li:nth-child(4).on a {color: #1e69e2;}
+
+
+
+
+/* ========== [main] ========== */
+.mainWrap .section {position: relative; left: 0; top: 0; z-index: 99; opacity: 1;}
+/** page background **/
+#sec1 {background: url('../img/main/bg2.jpg') center center / cover no-repeat;}
+#sec2 {background: url(../img/bg2.jpg) center center / cover no-repeat;}
+#sec3 {background: url(../img/bg3.jpg) center center / cover no-repeat;}
+#sec4 {background: url(../img/bg4.jpg) center center / cover no-repeat;}
+
+/** page text **/
+.mainWrap .section .secIn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/** page con **/
+.mainWrap .section .con {text-align: center;}
+.section > div .slogan {font-size: 30px;}
+.section > div .tit {font-size: 14px; color: #000;}
+.section.page1 .slogan {color: #f8b418;}
+.section.page2 .slogan {color: #c40000;}
+.section.page2 .btn {color: #c40000; border: 1px solid #c40000;}
+.section.page3 .slogan {color: #755232;}
+.section.page3 .btn {color: #755232; border: 1px solid #755232;}
+.section.page4 .slogan {color: #1e69e2;}
+.section.page4 .btn {color: #1e69e2; border: 1px solid #1e69e2;}
+
+/** page btn **/
+.section > div .btn {
+    display: inline-block; 
+    width: 150px; 
+    height: 48px; 
+    font-size: 20px; 
+    line-height: 46px; 
+    text-align: center; 
+    margin-top: 36px;
+    background-color: none;
+    position: relative;
+    z-index: 1;
+}
+.section > div .btn:hover {border: 1px solid #222; color: #fff;}
+/*이벤트가 발생하기 전의 과정*/
+.section > div .btn:after{width: 0; height: 100%; position: absolute; top: 0; left: 0; content: ""; -webkit-transition:all 0.7s ease; -moz-transition:all 0.7s ease; -o-transition:all 0.7s ease; transition:all 0.7s ease; z-index: -1;}
+/*마우스가 올라갔을 때 발생되는 애니메이션*/
+.section > div .btn:hover:after{width: 100%;}
+section > div .btn:after{background-color: #222; -webkit-transition-duration: .3s; transition-duration: .3s;}
+
+
+
+/* ========== [active 준비과정] ========== */
+.mainWrap .section .con {
+    word-wrap: break-word;
+    word-break: keep-all;
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    -webkit-transition-duration: .4s;
+    -webkit-transition-timing-function: cubic-bezier(0,0,.2,1);
+    transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+
+.mainWrap .section .con .t, 
+.mainWrap .section .con .slogan, 
+.mainWrap .section .con .tit, 
+.mainWrap .section .con .btn {
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    -webkit-duration: .7s;
+    -webkit-transition-timing-function: cubic-bezier(0,0,.2,1);
+    transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    duration: .7s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+.mainWrap .section .con .slogan {
+    overflow: hidden;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+}
+.mainWrap .section .con .tit {
+    overflow: hidden;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+}
+
+.mainWrap .section .con .btn {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+/* ========== [active 실행] ========== */
+.mainWrap .section.active .con {opacity: 1;}
+
+.mainWrap .section.active .con .t, 
+.mainWrap .section.active .con .slogan, 
+.mainWrap .section.active .con .tit, 
+.mainWrap .section.active .con .btn {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.mainWrap .section.active .t, 
+.mainWrap .section.active .slogan {
+    -webkit-transition-delay: .5s;
+    -webkit-transition-duration: .5s;
+    transition-delay: .5s;
+    transition-duration: .5s;
+}
+
+.mainWrap .section.active .tit {
+    -webkit-transition-delay: .55s;
+    -webkit-transition-duration: .5s;
+    transition-delay: .55s;
+    transition-duration: .5s;
+}
+
+.mainWrap .section.active .btn {
+    -webkit-transition-delay: .7s;
+    transition-delay: .7s;
+}
+
+/* ========== [#sec3] ========== */
+
+.page3 .busi-con {position: absolute; width: 1140px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.page3 .busi-con > .con {padding-bottom: 100px;}
+.busi-con .busi-list {width: 100%; height:520px; overflow:hidden;}
+.busi-con .busi-list li {position: relative; float: left; width: 25%; height: 100%; overflow: hidden; transition: width 1s;}
+.busi-con .busi-list li.busi1 {background: url("../img/dokk/business_img01.jpg") top center /cover no-repeat;}
+.busi-con .busi-list li.busi1 {background: url("../img/dokk/business_img01.jpg") top center /cover no-repeat;}
+.busi-con .busi-list li.busi1 {background: url("../img/dokk/business_img01.jpg") top center /cover no-repeat;}
+.busi-con .busi-list li.busi1 {background: url("../img/dokk/business_img01.jpg") top center /cover no-repeat;}
+.busi-con.active .busi-list li {width: 10.6666%;}
+.busi-con.active .busi-list li.active {width: 68%;}
+.busi-con .busi-list li .bg-black {position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 4; opacity: 0; background: rgba(255, 255, 255, 0.25); transition: opacity 500ms;}
+.busi-con.active .busi-list li .bg-black {opacity: 1;}
+.busi-con.active .busi-list li.active .bg-black {opacity: 0;}
+.busi-con .busi-list li .bg-hover {position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 100%; text-align: right; z-index: 5; opacity: 0; transition: opacity .5s .4s;}
+.busi-con.active .busi-list li.active .bg-hover {opacity:1;transition:none;}
+.busi-con .busi-list li .bg-hover img {position: absolute; right: -337px; top: 0; transition: all .9s;}
+.busi-con .busi-list li.active .bg-hover img {right: 0;}
+.busi-con .busi-list li.busi1 .bg-hover {background: url("../img/dokk/business_img01_over.png") center top /cover no-repeat;}
+.busi-con .busi-list li.busi1 .bg-hover {background: url("../img/dokk/business_img01_over.png") center top /cover no-repeat;}
+.busi-con .busi-list li.busi1 .bg-hover {background: url("../img/dokk/business_img01_over.png") center top /cover no-repeat;}
+.busi-con .busi-list li.busi1 .bg-hover {background: url("../img/dokk/business_img01_over.png") center top /cover no-repeat;}
+.busi-con .busi-list li .txtbox .txt {position: absolute; left: 50%; top: 351px; transform: rotate(0.0001deg) translate(-50%, 0); z-index: 6; opacity: 1; transition: opacity 500ms .3s;}
+.busi-con.active .busi-list li .txtbox .txt {opacity: 0; transition: opacity 500ms;}
+.busi-con .busi-list li .txtbox .txt-hover {position: absolute; left: 50%; top: 50%; transform: rotate(0.0001deg) translate(-50%, -50%); z-index: 6; opacity: 0; transition: opacity 500ms, transform 500ms;}
+.busi-con .busi-list li .txtbox .txt-hover > span {display: block;}
+.busi-con.active .busi-list li .txtbox .txt-hover {transition: opacity 500ms 0.2s; opacity: 1;}
+.busi-con.active .busi-list li.active .txtbox .txt-hover {transition: opacity 500ms 0; opacity: 0;}
+
+/* ========== [active 실행] ========== */
