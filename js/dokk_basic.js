@@ -1,6 +1,11 @@
 
 
 $(document).ready(function() {
+
+	$(".section").on("scroll",function(){
+		console.log("hihi!")
+	});
+	
 	//높이값 갱신
 	var ht = $(window).height();	
 	$("section").height(ht);
@@ -52,7 +57,8 @@ $(document).ready(function() {
 		$.fn.fullpage.moveTo(i+1);
 		return false;
 	});
-	
+
+
 	//page3
 	$(function() {
 		$(".busi-list li").on("mouseenter",function(e){
@@ -94,10 +100,9 @@ $(document).ready(function() {
 			$(".site_list").css({"display":"block"});
 		}
 	});
-
-	$("body").scroll(function() {
-		console.log("hhihi~")
-	})
+	
+		
+	
 });
 
 
