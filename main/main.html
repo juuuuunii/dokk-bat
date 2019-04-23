@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="../css/basic.css">
     <link rel="stylesheet" href="../css/dokk_basic.css">
     <link rel="stylesheet" href="../css/fullpage.css">
-    
+    <link rel="stylesheet" href="../css/swiper.css">
+    <!-- w3 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
     <script src="../js/prefixfree.min.js"></script>
-    <script src="../js/jquery.easing.1.3.js"></script>
     <script src="../js/dokk_basic.js"></script>
 
     <!-- 마우스휠-->
@@ -26,7 +30,7 @@
 
   <div id="main">
 
-     <!-- Navi-->
+    <!-- Navi-->
     <div class="mainNavi">
       <ul>
           <li class="on"><a href="#sec1">00</a></li>
@@ -41,8 +45,9 @@
 
     <!-- main-->
     <div class="mainWrap fullpage-wrapper">
+
       <!-- sec1-->
-      <div id="sec1" class="section fp-section fp-table page1">
+      <div id="sec1" class="section fp-section fp-table">
         <div class="fp-tableCell">
           <div class="secIn">
               <div class="con">
@@ -60,7 +65,7 @@
           <div class="secIn">
 
             <!-- 컨텐츠 시작 -->
-            <div class="intro-con">
+            <div class="sec-con">
 
               <!-- 슬로건 -->
               <div class="con">
@@ -80,7 +85,7 @@
           <div class="secIn">
 
             <!-- 컨텐츠 시작 -->
-              <div class="busi-con">
+              <div class="sec-con">
 
                 <!-- 슬로건 -->
                 <div class="con">
@@ -89,134 +94,305 @@
                 </div>
                 
                 <!-- 리스트 시작 -->
-                <ul class="busi-list">
+                <div class="con-list">
+                  <ul class="busi-list clear list">
                   <!-- 리스트 1 -->
-                  <li class="busi1">
-                    <div class="inner">
-                      <div class="txtBox">
-                        <p class="txt">도깨비방망이</p>
-                        <P class="txt-hover">
-                          <span>도</span>
-                          <span>깨</span>
-                          <span>비</span>
-                          <span>방</span>
-                          <span>망</span>
-                          <span>이</span>
-                        </P>
+                    <li class="busi1">
+                      <div class="inner">
+                        <div class="txtBox">
+                          <p class="txt">도깨비방망이</p>
+                          <P class="txt-hover">
+                            <span>도</span>
+                            <span>깨</span>
+                            <span>비</span>
+                            <span>방</span>
+                            <span>망</span>
+                            <span>이</span>
+                          </P>
+                        </div>
+                        <div class="bg-hover">
+                          <a href="#" target="_self" title="페이지이동">
+                            <img src="../img/dokk/txt_business01_on.jpg">
+                          </a>
+                        </div>
                       </div>
-                      <div class="bg-hover">
-                        <a href="#" target="_self" title="페이지이동">
-                          <img src="../img/dokk/txt_business01_on.jpg">
-                        </a>
+                    </li>
+                    <!-- 리스트 2 -->
+                    <li class="busi2">
+                      <div class="inner">
+                        <div class="txtBox">
+                          <p class="txt">도깨비몰</p>
+                          <P class="txt-hover">
+                            <span>도</span>
+                            <span>깨</span>
+                            <span>비</span>
+                            <span>몰</span>
+                          </P>
+                        </div>
+                        <div class="bg-hover">
+                          <a href="#" target="_self" title="페이지이동">
+                            <img src="../img/dokk/txt_business01_on.jpg">
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <!-- 리스트 2 -->
-                  <li class="busi1">
-                    <div class="inner">
-                      <div class="txtBox">
-                        <p class="txt">도깨비몰</p>
-                        <P class="txt-hover">
-                          <span>도</span>
-                          <span>깨</span>
-                          <span>비</span>
-                          <span>몰</span>
-                        </P>
+                    </li>
+                    <!-- 리스트 3 -->
+                    <li class="busi3">
+                      <div class="inner">
+                        <div class="txtBox">
+                          <p class="txt">도깨비몰</p>
+                          <P class="txt-hover">
+                            <span>도</span>
+                            <span>깨</span>
+                            <span>비</span>
+                            <span>퀵</span>
+                            <span>다</span>
+                            <span>방</span>
+                          </P>
+                        </div>
+                        <div class="bg-hover">
+                          <a href="#" target="_self" title="페이지이동">
+                            <img src="../img/dokk/txt_business01_on.jpg">
+                          </a>
+                        </div>
                       </div>
-                      <div class="bg-hover">
-                        <a href="#" target="_self" title="페이지이동">
-                          <img src="../img/dokk/txt_business01_on.jpg">
-                        </a>
+                    </li>
+                    <!-- 리스트 4 -->
+                    <li class="busi4">
+                      <div class="inner">
+                        <div class="txtBox">
+                          <p class="txt">도깨비법률</p>
+                          <P class="txt-hover">
+                            <span>도</span>
+                            <span>깨</span>
+                            <span>비</span>
+                            <span>법</span>
+                            <span>률</span>
+                          </P>
+                        </div>
+                        <div class="bg-hover">
+                          <a href="#" target="_self" title="페이지이동">
+                            <img src="../img/dokk/txt_business01_on.jpg">
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <!-- 리스트 3 -->
-                  <li class="busi1">
-                    <div class="inner">
-                      <div class="txtBox">
-                        <p class="txt">도깨비몰</p>
-                        <P class="txt-hover">
-                          <span>도</span>
-                          <span>깨</span>
-                          <span>비</span>
-                          <span>퀵</span>
-                          <span>다</span>
-                          <span>방</span>
-                        </P>
-                      </div>
-                      <div class="bg-hover">
-                        <a href="#" target="_self" title="페이지이동">
-                          <img src="../img/dokk/txt_business01_on.jpg">
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- 리스트 4 -->
-                  <li class="busi1">
-                    <div class="inner">
-                      <div class="txtBox">
-                        <p class="txt">도깨비법률</p>
-                        <P class="txt-hover">
-                          <span>도</span>
-                          <span>깨</span>
-                          <span>비</span>
-                          <span>법</span>
-                          <span>률</span>
-                        </P>
-                      </div>
-                      <div class="bg-hover">
-                        <a href="#" target="_self" title="페이지이동">
-                          <img src="../img/dokk/txt_business01_on.jpg">
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul>
+                </div>
+                
                 <!-- 리스트 끝 -->
               </div>
-
              <!-- 컨텐츠 끝 -->
+
           </div>
         </div>
       </div>
 
 
-      <!-- sec3-->
+      <!-- sec4-->
       <div id="sec4" class="section fp-section fp-table page4">
         <div class="fp-tableCell">
           <div class="secIn">
-            <div class="con">
-              <span class="t">PROJECT #3</span>
-              <p class="slogan">SHINY ADDICT</p>
-              <p class="tit">
-                법률소송, 어렵게만 느껴지시나요?<br/>
-                도깨비법률에서 법률자문부터 소송진행까지 한 눈에 보여드립니다.
-              </p>
-              <a href="#" class="btn">GO SITE</a>
+
+            <!-- 컨텐츠 시작 -->
+            <div class="sec-con">
+
+              <!-- 슬로건 -->
+              <div class="con">
+                <p class="slogan">든든한 파트너 도깨비방망이</p>
+                <p class="tit">
+                  함께 즐거운 세상을 만들기 위해<br/> 
+                  우리의 경험을 나눕니다.
+                </p>
+              </div>
+              
+              <!-- 리스트 시작 -->
+              <div class="con-list">
+                <ul class="box-list clear list">
+                  <li class="box box1">
+                    <a href="#" target="_blank" title="새창열기">
+                      <h3>
+                        <span>사회공헌</span>
+                        <span>함께 더불어 행복한 세상을 위해<br/>꾸준하고 진정성 있는 나눔을 실천합니다.</span>
+                        <button class="btn">바로가기</button>
+                      </h3>
+                    </a>
+                  </li>
+                  <li class="box box2">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/R1XVJJE8ybQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </li>
+                  <li class="box box3">
+                    <div class="prom-box">
+                      <a href="#" target="_blank" title="새창열기">
+                        <h3>
+                          <span>채용관</span>
+                          <span>함께 즐거운 세상을 만들어나갈<br/>인재를 기다립니다.</span>
+                          <button class="btn">바로가기</button>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="sns-box clear">
+                        <h3>
+                          <span>DOKK</span>
+                          <span>도깨비 방망이의 SNS에서<br/>더 다양한 도깨비방방이를 만나보세요.</span>
+                          <a href="#" target="_blank" title="새창열기" class="sns facebook"><img src="../img/page4/icon_sns_facebook2.png" class="img" alt="페이스북"/></a>
+                          <a href="#" target="_blank" title="새창열기" class="sns instagram"><img src="../img/page4/icon_sns_insta2.png" class="img" alt="인스타그램"/></a>
+                          <a href="#" target="_blank" title="새창열기" class="sns blog"><img src="../img/page4/icon_sns_blog.png" class="img" alt="블로그"/></a>
+                          <a href="#" target="_blank" title="새창열기" class="sns youtube"><img src="../img/page4/youtube.png" class="img" alt="유투브"/></a>
+                        </h3>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- 리스트 끝 -->
+
             </div>
+            <!-- 컨텐츠 끝 -->
+
           </div>
-          
         </div>
       </div>
 
-      <!-- sec3-->
-      <div id="sec5" class="section fp-section fp-table page4">
+      <!-- sec5-->
+      <div id="sec5" class="section fp-section fp-table page5">
         <div class="fp-tableCell">
           <div class="secIn">
-            <div class="con">
-                <span class="t">PROJECT #3</span>
-                <p class="slogan">SHINY ADDICT</p>
-                <p class="tit">
-                  법률소송, 어렵게만 느껴지시나요?<br/>
-                  도깨비법률에서 법률자문부터 소송진행까지 한 눈에 보여드립니다.
-                </p>
-                <a href="#" class="btn">GO SITE</a>
+
+            <!-- 컨텐츠 시작 -->
+            <div class="sec-con">
+              <!-- 슬로건 -->
+              <div class="con">
+                <p class="slogan">뉴우-스룸</p>
+                <p class="tit">도깨비방망이의 최신 소식을 알려드립니다.</p>
+                  <!-- Add Arrows -->
+                <div class="swiper-button-next">&#62;</div>
+                <div class="swiper-button-prev">&#60;</div>
+              </div>
+
+              <!-- 리스트 시작 -->
+             <div class="swiper-container con-list">
+              <div class="swiper-wrapper list">
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news1.jpg" class="img" alt="선우코스메 진동크림"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비몰</h4>
+                      <h3>선우코스메 레이저 진동크림 판매</h3>
+                      <p>2019-04-20</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news4.jpg" class="img" alt="토모라이프 비타민"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비법률</h4>
+                      <h3>도법(도깨비법률) 사이트 오픈</h3>
+                      <p>2019-04-14</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news1.jpg" class="img" alt="선우코스메 진동크림"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비퀵다방</h4>
+                      <h3>[네이버뉴스] 커피시장의 새바람, 도깨비퀵다방 </h3>
+                      <p>2019-04-20</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news4.jpg" class="img" alt="토모라이프 비타민"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비몰</h4>
+                      <h3>토모라이프 비타민 출시</h3>
+                      <p>2019-04-14</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news1.jpg" class="img" alt="선우코스메 진동크림"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비몰</h4>
+                      <h3>선우코스메 레이저 진동크림 판매</h3>
+                      <p>2019-04-20</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news4.jpg" class="img" alt="토모라이프 비타민"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비법률</h4>
+                      <h3>도법(도깨비법률) 사이트 오픈</h3>
+                      <p>2019-04-14</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news1.jpg" class="img" alt="선우코스메 진동크림"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비퀵다방</h4>
+                      <h3>[네이버뉴스] 커피시장의 새바람, 도깨비퀵다방 </h3>
+                      <p>2019-04-20</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" target="_blank" title="새창열기">
+                    <div class="slide-img"><img src="../img/page5/news4.jpg" class="img" alt="토모라이프 비타민"/></div>
+                    <div class="slide-txt">
+                      <h4>도깨비몰</h4>
+                      <h3>토모라이프 비타민 출시</h3>
+                      <p>2019-04-14</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
+              <!-- 리스트 끝 -->
+
+            </div>
+            <!-- 컨텐츠 끝 -->
           </div>
           
         </div>
       </div>
 
+
+      <div id="sec6" class="section fp-section fp-table footer">
+        <div class="fp-tableCell">
+          <div class="footer_wrap">
+            <div class="f_logo"><a href="#" target="_self" title="바로가기"><img src="../img/common/로고_도깨비방망이_B_01_f.png" class="img" alt="도깨비방망이 로고"/></a></div>
+            <div class="f_copy">
+              <ul class="clear">
+                <li><a href="#" target="_slef" title="개인정보 처리방침 바로가기"><b>개인정보 처리방침</b></a></li>
+                <li>|</li>
+                <li><a href="#" target="_slef" title="이메일무단수집거부 바로가기">이메일무단수집거부</a></li>
+                <li>|</li>
+                <li><a href="#" target="_slef" title="사이트맵 바로가기">사이트맵</a></li>
+              </ul>
+              <p>06640 서울 서초구 서초중앙로 64 3층 301호 (서초동, 대영빌딩)</p>
+              <p>Copyright © 행복뚝딱 도깨비몰. All Rights Reserved.</p>
+            </div>
+            <div class="f_site">
+              관련사이트 <i class="fa fa-angle-up"></i>
+              <ul class="site_list">
+                <li><a href="#" target="_blank" title="도꺠비몰 바로가기">도깨비몰</a></li>
+                <li><a href="#" target="_blank" title="도꺠비퀵다방 바로가기">도깨비퀵다방</a></li>
+                <li><a href="#" target="_blank" title="도꺠비법률 바로가기">도깨비법률</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
   </div>

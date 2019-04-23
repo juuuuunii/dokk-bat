@@ -19,17 +19,12 @@ caption {visibility:hidden;width:0;height:0;padding:0;margin:0;font-size:0;}
 legend {overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;padding:0;margin:0;font-size:0;text-indent:-100%;white-space:nowrap;z-index:-1}
 .ellipsis {display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 input, textarea, select, button {font-family:'NotoL';font-size:14px;letter-spacing:0;color:#555;vertical-align:middle}
-
-a {color:#555;text-decoration:none;/*outline:none;*/}
+button {background: transparent;}
+a {color:#555;text-decoration:none;}
 a.nolink {cursor:default;}
 a:link, a:visited {text-decoration:none}
-/*a:focus {outline:none;}*/
-
-button {display:inline-block;background:none;border:none; outline:none;}
-button:hover {color:#222;}
-/*button:focus {outline:none;}*/
-
 
 .sound_only {display: none;}
-
+.clear {clear:both;}
+.clear:after {clear:both; content:""; display: block;}
 

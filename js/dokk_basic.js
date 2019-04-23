@@ -1,11 +1,19 @@
 
 
 $(document).ready(function() {
+	//높이값 갱신
+	var ht = $(window).height();	
+	$("section").height(ht);
+	$(window).on("resize",function(){
+		var ht = $(window).height();	
+		$("section").height(ht);
+	});
+
 	//fullpage
 	var i_main, i_mall, i_cafe, i_law, i_foot;
 	$('#main .mainWrap').fullpage({
 		easing:'easeOutSine',
-		scrollingSpeed: '1500',
+		scrollingSpeed: '1300',
 		lockAnchors: true,
 		recordHistory: false,
 		loopHorizontal: false,
@@ -26,6 +34,7 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
 	function mainInit(){
 		i_main = $('#sec1').index() + 1;
 		i_dokk = $('#sec2').index() + 1;
@@ -34,6 +43,7 @@ $(document).ready(function() {
 		i_law = $('#sec5').index() + 1;
 		i_foot = $('#sec6').index() + 1;
 	}
+	//gnb
 	$(document).on('click', '.mainNavi a', function () {
 		var i = $('.mainNavi a').index(this);
 		$('.mainNavi li').removeClass('on');
@@ -42,19 +52,52 @@ $(document).ready(function() {
 		$.fn.fullpage.moveTo(i+1);
 		return false;
 	});
-
-
+	
+	//page3
 	$(function() {
-		$(".busi-con .busi-list li").on("mouseenter",function(e){
+		$(".busi-list li").on("mouseenter",function(e){
 			$(this).addClass("active");
-			$(".busi-con").addClass("active");
+			$(".page3 .sec-con").addClass("active");
 		});
-		$(".busi-con .busi-list li").on("mouseleave",function(e){
+		$(".busi-list li").on("mouseleave",function(e){
 			$(this).removeClass("active");
-			$(".busi-con").removeClass("active");
+			$(".page3 .sec-con").removeClass("active");
 		});
 	})
-	
+
+	//page5
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		keyboard: {
+		  enabled: true,
+		},
+		pagination: {
+		  el: '.swiper-pagination',
+		  clickable: true,
+		},
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+	  });
+
+	//footer
+	$(document).on('click', '.f_site', function () {
+		if($(".site_list").css('display') == 'block') {
+			$(".f_site > i").addClass("fa-angle-up");
+			$(".f_site > i").removeClass("fa-angle-down");
+			$(".site_list").css({"display":"none"});
+		} else {
+			$(".f_site > i").removeClass("fa-angle-up");
+			$(".f_site > i").addClass("fa-angle-down");
+			$(".site_list").css({"display":"block"});
+		}
+	});
+
+	$("body").scroll(function() {
+		console.log("hhihi~")
+	})
 });
 
 
