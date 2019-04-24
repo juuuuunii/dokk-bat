@@ -2,9 +2,7 @@
 
 $(document).ready(function() {
 
-	$(".section").on("scroll",function(){
-		console.log("hihi!")
-	});
+	
 	
 	//높이값 갱신
 	var ht = $(window).height();	
@@ -27,16 +25,32 @@ $(document).ready(function() {
 		normalScrollElements: '',
 		afterRender: function(){
 			var idx = $('.section.active').index();
-			$('.mainNavi').removeClass('hide');
 			$('.mainNavi li').removeClass('on');
 			$('.mainNavi li').eq(idx).addClass('on');
 			mainInit();
 		},
-		onLeave: function(index, nextIndex, delta){
-			if (nextIndex != i_foot) {
+		onLeave: function(index, nextIndex, direction){
+			if (index !== 7) {
 				$('.mainNavi li').removeClass('on');
 				$('.mainNavi li').eq(nextIndex-1).addClass('on');
 			}
+			
+			if(index == 7) {
+				$('.mainNavi').stop().fadeOut();
+			}
+
+			if(nextIndex !== i_main) {
+				$('.mainNavi').stop().fadeIn(2000);
+			} else {
+				$('.mainNavi').stop().fadeOut();
+			}
+			
+			if(nextIndex == i_foot) {
+				$('.section:not(:last-child)').css({"opacity":"0.5"})
+			} else {
+				$('.section').css({"opacity":"1"})
+			}
+			
 		}
 	});
 	
@@ -99,10 +113,7 @@ $(document).ready(function() {
 			$(".f_site > i").addClass("fa-angle-down");
 			$(".site_list").css({"display":"block"});
 		}
-	});
-	
-		
-	
+	});	
 });
 
 
