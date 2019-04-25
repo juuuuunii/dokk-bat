@@ -30,25 +30,27 @@ $(document).ready(function() {
 			mainInit();
 		},
 		onLeave: function(index, nextIndex, direction){
+			// mainNavi on
 			if (index !== 7) {
 				$('.mainNavi li').removeClass('on');
 				$('.mainNavi li').eq(nextIndex-1).addClass('on');
 			}
 			
-			if(index == 7) {
-				$('.mainNavi').stop().fadeOut();
-			}
-
+			// mainNavi In/Out
 			if(nextIndex !== i_main) {
 				$('.mainNavi').stop().fadeIn(2000);
 			} else {
 				$('.mainNavi').stop().fadeOut();
 			}
-			
 			if(nextIndex == i_foot) {
-				$('.section:not(:last-child)').css({"opacity":"0.5"})
+				$('.mainNavi').stop().fadeOut();
+			}
+
+			// footer focus 
+			if(nextIndex == i_foot) {
+				$('.foot-over').css({"display":"block"})
 			} else {
-				$('.section').css({"opacity":"1"})
+				$('.foot-over').css({"display":"none"})
 			}
 			
 		}

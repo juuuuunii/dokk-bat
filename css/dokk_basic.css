@@ -145,7 +145,7 @@ display: flex;
 .foot-over.on {display: block;}
 
 /* ========== [footer] ========== */
-#sec6 {background: #2d3d47; height: auto !important; padding: 50px 0; display: none;}
+#sec6 {background: #2d3d47; height: auto !important; padding: 50px 0;}
 .footer .footer_wrap {width: 1340px; margin: 0 auto;}
 .footer .footer_wrap > div {float: left;}
 .footer .footer_wrap .f_logo {width: 20%; margin-right: 50px;}
