@@ -8,21 +8,11 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .languege li a:hover {text-decoration: underline;color: rgba(0,0,0,1)}
 
 /** gnb **/
-.mainNavi {position: fixed; top: 50%; left: 0; margin-top: -100px; z-index: 5; display: none;}
-.mainNavi a {display: block; width: 200px; height: 60px; font-size: 14px; font-weight: 500; color: #000; text-align: right; overflow: hidden; opacity: 0.8; transition: all 0.5s;}
+.mainNavi {position: fixed; top: 50%; left: 10%; margin-top: -100px; z-index: 5; display: none;}
+.mainNavi a {display: block; height: 60px; font-size: 14px; font-weight: 500; color: #000; overflow: hidden; opacity: 0.8; transition: all 0.5s;}
 .mainNavi li:first-child {display: none;}
-.mainNavi li a:hover {font-size: 20px;opacity: 1;}
-.mainNavi li.on a {font-size: 20px;opacity: 1;}
-
-.mainNavi li:nth-child(2) a:hover {color: #f8b418;}
-.mainNavi li:nth-child(3) a:hover {color: #c40000;}
-.mainNavi li:nth-child(4) a:hover {color: #755232;}
-.mainNavi li:nth-child(5) a:hover {color: #1e69e2;}
-
-.mainNavi li:nth-child(2).on a {color: #f8b418;}
-.mainNavi li:nth-child(3).on a {color: #c40000;}
-.mainNavi li:nth-child(4).on a {color: #755232;}
-.mainNavi li:nth-child(5).on a {color: #1e69e2;}
+.mainNavi .num {font-size: 16px; color: #f8b418; display: block;}
+.mainNavi .blank {display: block; width: 8px; height: 8px; border: 1px solid rgba(0,0,0,0.5); border-radius: 8px; margin: 0 auto ;}
 
 /* ========== [공통사항] ========== */
 .mainWrap .section {width: 100%; height: 100%; position: relative; left: 0; top: 0; z-index: 99; opacity: 1;}
@@ -145,7 +135,7 @@ display: flex;
 .foot-over.on {display: block;}
 
 /* ========== [footer] ========== */
-#sec6 {background: #2d3d47; height: auto !important; padding: 50px 0;}
+#sec6 {background: #93979f; height: auto !important; padding: 50px 0;}
 .footer .footer_wrap {width: 1340px; margin: 0 auto;}
 .footer .footer_wrap > div {float: left;}
 .footer .footer_wrap .f_logo {width: 20%; margin-right: 50px;}
@@ -159,18 +149,3 @@ display: flex;
 .f_site > .fa {float: right; padding-right: 10px; line-height: 35px; }
 .f_site > .site_list {display: none; border: 1px solid #bbb; border-bottom: 0; background: #93979f; padding-left: 10px; position: absolute; width: 101%; height: auto; top: -107px; left: -1px; box-sizing: border-box; z-index: 10;}
 .f_site > .site_list a {color: #fff;}
-.footer #btnTop {position: absolute; top: -35px; right: 8%; width: 70px; height: 70px; line-height: 70px; background-color: #6ca9c4;}
-.footer #btnTop span:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 44%;
-    transform: translate(-44%, -50%);
-    transform: rotate(-45deg);
-    width: 12px;
-    height: 12px;
-    text-align: center;
-    border-style: solid;
-    border-width: 2px 2px 0 0;
-    border-color: #fff;
-}

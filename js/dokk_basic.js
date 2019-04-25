@@ -1,9 +1,6 @@
 
 
 $(document).ready(function() {
-
-	
-	
 	//높이값 갱신
 	var ht = $(window).height();	
 	$("section").height(ht);
@@ -13,27 +10,42 @@ $(document).ready(function() {
 	});
 
 	//fullpage
-	var i_main, i_mall, i_cafe, i_law, i_foot;
+	var i_main, i_mall, i_cafe, i_law, i_foot, i_top;
 	$('#main .mainWrap').fullpage({
 		easing:'easeOutSine',
+		navigation: false,
 		scrollingSpeed: '1300',
-		lockAnchors: true,
 		recordHistory: false,
 		loopHorizontal: false,
 		touchSensitivity: 15,
 		fixedElements: '',
 		normalScrollElements: '',
-		afterRender: function(){
+		afterRender: function(index){
 			var idx = $('.section.active').index();
+			$('.mainNavi .blank').css({"display":"block"});
+			$('.mainNavi .num').css({"display":"none"});
 			$('.mainNavi li').removeClass('on');
+			
+			//console.log($('.mainNavi .blank').eq(idx));
+			$('.mainNavi .blank').eq(idx).css({"display":"none"});
+			$('.mainNavi .num').eq(idx).css({"display":"block"});
 			$('.mainNavi li').eq(idx).addClass('on');
+			
 			mainInit();
 		},
 		onLeave: function(index, nextIndex, direction){
 			// mainNavi on
 			if (index !== 7) {
+				$('.mainNavi .blank').css({"display":"block"});;
+				$('.mainNavi .num').css({"display":"none"});
 				$('.mainNavi li').removeClass('on');
+				
+				
+				//console.log($('.mainNavi .blank').eq(nextIndex));
+				$('.mainNavi .blank').eq(nextIndex-2).css({"display":"none"});
+				$('.mainNavi .num').eq(nextIndex-1).css({"display":"block"});
 				$('.mainNavi li').eq(nextIndex-1).addClass('on');
+				
 			}
 			
 			// mainNavi In/Out
@@ -45,14 +57,6 @@ $(document).ready(function() {
 			if(nextIndex == i_foot) {
 				$('.mainNavi').stop().fadeOut();
 			}
-
-			// footer focus 
-			if(nextIndex == i_foot) {
-				$('.foot-over').css({"display":"block"})
-			} else {
-				$('.foot-over').css({"display":"none"})
-			}
-			
 		}
 	});
 	
@@ -64,16 +68,23 @@ $(document).ready(function() {
 		i_law = $('#sec5').index() + 1;
 		i_foot = $('#sec6').index() + 1;
 	}
+
 	//gnb
 	$(document).on('click', '.mainNavi a', function () {
 		var i = $('.mainNavi a').index(this);
+		$('.mainNavi .blank').css({"display":"block"});
+		$('.mainNavi .num').css({"display":"none"});
 		$('.mainNavi li').removeClass('on');
+		
+		//console.log($('.mainNavi .blank').eq(i));
+		$('.mainNavi .blank').eq(i).css({"display":"none"});
+		$('.mainNavi .num').eq(i).css({"display":"block"});
 		$('.mainNavi li').eq(i).addClass('on');
+		
 
 		$.fn.fullpage.moveTo(i+1);
 		return false;
 	});
-
 
 	//page3
 	$(function() {
@@ -116,7 +127,7 @@ $(document).ready(function() {
 			$(".site_list").css({"display":"block"});
 		}
 	});	
+	
 });
-
 
 
