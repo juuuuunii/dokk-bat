@@ -50,7 +50,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .mainWrap .section.active .con .tit{opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); -o-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0);}
 .mainWrap .section.active .slogan {-webkit-transition-delay: .55s; -webkit-transition-duration: .5s; transition-delay: .55s; transition-duration: .5s;}
 .mainWrap .section.active .tit {-webkit-transition-delay: .55s; -webkit-transition-duration: .5s; transition-delay: .55s; transition-duration: .5s;}
-.section .sec-con {position: absolute; width: 1340px; top: 50%; left: 50%; transform: translate(-50%, -50%); padding-bottom: 100px;}
+.section .sec-con {position: absolute; width: 1170px; top: 50%; left: 50%; transform: translate(-50%, -50%); padding-bottom: 100px;}
 .section .sec-con > .con {padding-bottom: 60px;}
 
 
@@ -109,31 +109,34 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 
 /* ========== [#sec5] ========== */
 .section.page5 .slogan {color: #1e69e2;}
-.swiper-container {width: 100%; height: 500px !important;}
-.swiper-slide {
-height: 430px !important;
-text-align: left;
-font-size: 18px;
-background: #fff;
-/* Center slide text vertically */
-display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
--webkit-box-align: center;
--ms-flex-align: center;
+.section.news .news-list {width: 100%; height: 520px; overflow: hidden; position: relative; z-index: 1;}
+.section.news .news-list > li {width: 49.5%; height: 100%; float: left; margin-right: 1%;}
+.section.news .news-list .nLeft .nLeftTop {width: 100%; height: 65%; margin-bottom: 2%; overflow: hidden;}
+.section.news .news-list .nLeft .nLeftBott {width: 100%; height: 32%; overflow: hidden;}
+.section.news .news-list .nLeft .nLeftBott a {display: block; width: 49%; height: 100%; border: 1px solid #e0e0e0; box-sizing: border-box; padding: 5% 0; float: left; position: relative;}
+.section.news .news-list .nLeft .nLeftBott a:first-child {margin-right: 2%;}
+.section.news .news-list .nLeft .nLeftBott a img {width: 25%; position: absolute; top: 50%; left: 28px; transform: translateY(-50%);}
+.section.news .news-list .news-con {margin-right: 0;}
+.section.news .news-list .news-con > div {width: 48%; height: 100%; float: left;}
+.section.news .news-list .nMid .nMidTop {height: 65%; position: relative; box-sizing: border-box; border: 1px solid #e0e0e0; background: #fff; padding: 10% 8% 0; margin-bottom: 2%;}
+.section.news .news-list .nMid .nMidTop ul {border-top: 1px solid #e0e0e0; overflow: hidden;}
+.section.news .news-list .nMid .nMidTop li {padding-top: 13%;}
+.section.news .news-list .nMid .nMidTop li div {float: left; overflow: hidden;}
+.section.news .news-list .nMid .nMidTop .sns_img {width: 20%;}
+.section.news .news-list .nMid .nMidTop .sns_txt {width: 75%; float: right;}
+.section.news .news-list .nMid .nMidBott {height: 32%; background: #f8b418;}
+.section.news .news-list .newsBox .tit {font-size: 18px; color: #555;}
+.section.news .news-list .nRight {
+    width: 286px;
+    height: 521px;
+    background: #ebebec;
+    opacity: 0.9;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 26px 30px 0;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {bottom: 20px;}
-.swiper-button-prev, .swiper-button-next {font-size: 20px; width: 40px !important; height: 40px !important; line-height:38px !important; top: 30px !important; border: 1px solid #222; border-radius: 20px;}
-.page5 .slide-txt {margin: 40px 0 0 20px;}
-.page5 .slide-txt h4 {font-size: 14px;}
-.page5 .slide-txt h3 {font-size: 16px;}
-.page5 .slide-txt p {font-size: 12px;}
-.foot-over {width: 100%; height: 100%; background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; display: none;}
-.foot-over.on {display: block;}
-
 /* ========== [footer] ========== */
 #sec6 {background: #93979f; height: auto !important; padding: 50px 0;}
 .footer .footer_wrap {width: 1340px; margin: 0 auto;}
