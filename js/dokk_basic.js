@@ -98,23 +98,6 @@ $(document).ready(function() {
 		});
 	})
 
-	//page5
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 4,
-		spaceBetween: 30,
-		keyboard: {
-		  enabled: true,
-		},
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-		},
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-	  });
-
 	//footer
 	$(document).on('click', '.f_site', function () {
 		if($(".site_list").css('display') == 'block') {

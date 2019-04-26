@@ -74,7 +74,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .page3 .sec-con .busi-list li .bg-hover {position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 100%; text-align: right; z-index: 5; opacity: 0; transition: opacity .5s .4s;}
 .page3 .sec-con.active .busi-list li.active .bg-hover {opacity:1;transition:none;}
 .page3 .sec-con .busi-list li .bg-hover img {position: absolute; right: -337px; top: 0; transition: all .9s;}
-.page3 .sec-con .busi-list li.active .bg-hover img {right: 0;}
+.page3 .sec-con .busi-list li.active .bg-hover img { right: 0;}
 .page3 .sec-con .busi-list li.busi1 .bg-hover {background: url("../img/page3/business_img01_over.png") center center no-repeat;}
 .page3 .sec-con .busi-list li.busi2 .bg-hover {background: url("../img/page3/business_img02_over.png") center center no-repeat;}
 .page3 .sec-con .busi-list li.busi3 .bg-hover {background: url("../img/page3/business_img03_over.png") center center no-repeat;}
@@ -87,56 +87,31 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .page3 .sec-con.active .busi-list li .txtBox .txt-hover {transition: opacity 500ms 0.2s; opacity: 1;}
 .page3 .sec-con.active .busi-list li.active .txtBox .txt-hover {transition: opacity 500ms 0; opacity: 0;}
 
+
 /* ========== [#sec4] ========== */
-.section.page4 .slogan {color: #755232;}
-.page4 .box-list > li {float: left; height: 500px; position: relative;}
-.page4 .box1 {width: 25%; background: url(../img/page4/box1.jpg) center center /cover no-repeat;}
-.page4 .box2 {width: 50%;}
-.page4 .box3 {width: 25%;}
-.page4 .box h3 > span {display: block;}
-.page4 .box h3 > span:first-child {font-size: 20px; margin-bottom: 15px;}
-.page4 .box h3 > span:nth-child(2) {font-size: 14px;}
-.page4 .box h3 > .btn {width: 130px; line-height: 36px; border: 1px solid #222; border-radius: 25px; font-size: 16px; margin-top: 30px;}
-.page4 .box1 h3 {padding: 13% 15%;}
-.page4 .box2 video {width: 100%; height: 100%;}
-.page4 .box3 h3 {padding: 14% 10%;}
-.page4 .box3 > div  {background: #f3f4f6; height: 50%;}
-.page4 .box3 > div h3 {margin: 0 !important;}
-.page4 .box3 .sns-box {border-top: 1px solid #e5e5e5;}
-.page4 .box3 .sns {width: 50px; float: left; margin: 30px 15px 0 0;}
-.page4 .box3 .sns img {width: 100%;}
-
-
-/* ========== [#sec5] ========== */
-.section.page5 .slogan {color: #1e69e2;}
-.section.news .news-list {width: 100%; height: 520px; overflow: hidden; position: relative; z-index: 1;}
+.section.news .news-list {width: 100%; height: 520px; position: relative; z-index: 1;}
 .section.news .news-list > li {width: 49.5%; height: 100%; float: left; margin-right: 1%;}
 .section.news .news-list .nLeft .nLeftTop {width: 100%; height: 65%; margin-bottom: 2%; overflow: hidden;}
-.section.news .news-list .nLeft .nLeftBott {width: 100%; height: 32%; overflow: hidden;}
-.section.news .news-list .nLeft .nLeftBott a {display: block; width: 49%; height: 100%; border: 1px solid #e0e0e0; box-sizing: border-box; padding: 5% 0; float: left; position: relative;}
+.section.news .news-list .nLeft .nLeftBott {width: 100%; height: 33%; overflow: hidden;}
+.section.news .news-list .nLeft .nLeftBott a {display: block; width: 49%; height: 100%; border: 1px solid #e0e0e0; box-sizing: border-box; padding: 5% 4% 0; float: left; position: relative;}
 .section.news .news-list .nLeft .nLeftBott a:first-child {margin-right: 2%;}
-.section.news .news-list .nLeft .nLeftBott a img {width: 25%; position: absolute; top: 50%; left: 28px; transform: translateY(-50%);}
+.section.news .news-list .nLeft .nLeftBott a img {width: 15%; margin-right: 15px;}
 .section.news .news-list .news-con {margin-right: 0;}
-.section.news .news-list .news-con > div {width: 48%; height: 100%; float: left;}
-.section.news .news-list .nMid .nMidTop {height: 65%; position: relative; box-sizing: border-box; border: 1px solid #e0e0e0; background: #fff; padding: 10% 8% 0; margin-bottom: 2%;}
-.section.news .news-list .nMid .nMidTop ul {border-top: 1px solid #e0e0e0; overflow: hidden;}
+.section.news .news-list .news-con > div {width: 49%; height: 100%; float: left; margin-right: 2%;}
+.section.news .news-list .nMid .nMidTop {height: 65%; position: relative; box-sizing: border-box; border: 1px solid #e0e0e0; background: #fff; padding: 10% 8% 0; margin-bottom: 4%;}
+.section.news .news-list .nMid .nMidTop ul {border-top: 1px solid #e0e0e0; margin-top: 15px;  overflow: hidden;}
 .section.news .news-list .nMid .nMidTop li {padding-top: 13%;}
 .section.news .news-list .nMid .nMidTop li div {float: left; overflow: hidden;}
 .section.news .news-list .nMid .nMidTop .sns_img {width: 20%;}
 .section.news .news-list .nMid .nMidTop .sns_txt {width: 75%; float: right;}
-.section.news .news-list .nMid .nMidBott {height: 32%; background: #f8b418;}
-.section.news .news-list .newsBox .tit {font-size: 18px; color: #555;}
-.section.news .news-list .nRight {
-    width: 286px;
-    height: 521px;
-    background: #ebebec;
-    opacity: 0.9;
-    margin-left: 10px;
-    float: left;
-    position: relative;
-    box-sizing: border-box;
-    padding: 26px 30px 0;
-}
+.section.news .news-list .nMid .nMidBott {height: 33%; background: #f8b418; padding: 10% 8% 0; position: relative;}
+.section.news .news-list .nMid .nMidBott span {max-width: 25%; position: absolute; right: 20px; bottom: 0;}
+.section.news .news-list .newsBox .tit {font-size: 20px; color: #222; margin-bottom: 20px;}
+.section.news .news-list .nRight {width: 100%; height: 100%; background: #ebebec; opacity: 0.9; position: relative; box-sizing: border-box; padding: 5% 4% 0; margin-right: 0 !important;}
+.section.news .news-list .nRight .tit span {float: right;}
+.section.news .news-list .nRight ul {border-top: 1px solid #b9b9b9; margin-top: 15px; padding-top: 13%; overflow: hidden;}
+.section.news .news-list .nRight ul li {margin-bottom: 15px;}
+
 /* ========== [footer] ========== */
 #sec6 {background: #93979f; height: auto !important; padding: 50px 0;}
 .footer .footer_wrap {width: 1340px; margin: 0 auto;}
@@ -146,7 +121,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .footer .footer_wrap .f_copy {width: 50%; color: #fff;}
 .footer .footer_wrap .f_copy > ul > li {float: left; margin-right: 20px;}
 .footer .footer_wrap .f_copy > ul > li > a {color: #fff;}
-.footer .footer_wrap .f_copy > ul > :nth-child(odd):hover {text-decoration: underline;}
+.footer .footer_wrap .f_copy > ul > :nth  -child(odd):hover {text-decoration: underline;}
 .footer .footer_wrap .f_copy > p {font-size: 12px;}
 .footer .footer_wrap .f_site {width: 195px; height: 35px; line-height: 35px; padding-left: 10px; border: 1px solid #bbb; color: #e1e1e1; cursor: pointer; position: relative;}
 .f_site > .fa {float: right; padding-right: 10px; line-height: 35px; }
