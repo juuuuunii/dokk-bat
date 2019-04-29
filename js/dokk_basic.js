@@ -1,5 +1,6 @@
 
 
+
 $(document).ready(function() {
 	//높이값 갱신
 	var ht = $(window).height();	
@@ -10,7 +11,7 @@ $(document).ready(function() {
 	});
 
 	//fullpage
-	var i_main, i_mall, i_cafe, i_law, i_foot, i_top;
+	var main, intro, business, news, foot;
 	$('#main .mainWrap').fullpage({
 		easing:'easeOutSine',
 		navigation: false,
@@ -35,7 +36,7 @@ $(document).ready(function() {
 		},
 		onLeave: function(index, nextIndex, direction){
 			// mainNavi on
-			if (index !== 7) {
+			if (index !== 6) {
 				$('.mainNavi .blank').css({"display":"block"});;
 				$('.mainNavi .num').css({"display":"none"});
 				$('.mainNavi li').removeClass('on');
@@ -49,24 +50,23 @@ $(document).ready(function() {
 			}
 			
 			// mainNavi In/Out
-			if(nextIndex !== i_main) {
+			if(nextIndex !== main) {
 				$('.mainNavi').stop().fadeIn(2000);
 			} else {
 				$('.mainNavi').stop().fadeOut();
 			}
-			if(nextIndex == i_foot) {
+			if(nextIndex == foot) {
 				$('.mainNavi').stop().fadeOut();
 			}
 		}
 	});
 	
 	function mainInit(){
-		i_main = $('#sec1').index() + 1;
-		i_dokk = $('#sec2').index() + 1;
-		i_mall = $('#sec3').index() + 1;
-		i_cafe = $('#sec4').index() + 1;
-		i_law = $('#sec5').index() + 1;
-		i_foot = $('#sec6').index() + 1;
+		main = $('#sec1').index() + 1;
+		intro = $('#sec2').index() + 1;
+		business = $('#sec3').index() + 1;
+		news = $('#sec4').index() + 1;
+		foot = $('#sec5').index() + 1;
 	}
 
 	//gnb
@@ -86,15 +86,20 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//page3
+	//main
+	$(".intro_bt").click(function() {
+		$.fn.fullpage.moveTo(2)
+	});
+
+	//business
 	$(function() {
 		$(".busi-list li").on("mouseenter",function(e){
 			$(this).addClass("active");
-			$(".page3 .sec-con").addClass("active");
+			$(".business .sec-con").addClass("active");
 		});
 		$(".busi-list li").on("mouseleave",function(e){
 			$(this).removeClass("active");
-			$(".page3 .sec-con").removeClass("active");
+			$(".business .sec-con").removeClass("active");
 		});
 	})
 

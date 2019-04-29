@@ -18,7 +18,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .mainWrap .section {width: 100%; height: 100%; position: relative; left: 0; top: 0; z-index: 99; opacity: 1;}
 /** page con **/
 .mainWrap .section .secIn {position: relative; width: 100%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;}
-.mainWrap .section .con {text-align: center;}
+.mainWrap .section .con {text-align: center; width: 100%;}
 .mainWrap .section .con {
     word-wrap: break-word;
     word-break: keep-all;
@@ -41,7 +41,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
     transition-timing-function: cubic-bezier(0,0,.2,1);
 }
 .section > div .slogan {font-size: 30px; font-weight: 500; margin-bottom: 10px;}
-.section > div .tit {font-size: 18px; color: #555;}
+.section > div .tit {font-size: 18px; color: #555; line-height: 25px;}
 .mainWrap .section .con .slogan,
 .mainWrap .section .con .tit {overflow: hidden; transform: translateY(20px); -webkit-transform: translateY(20px); -moz-transform: translateY(20px); -o-transform: translateY(20px); -ms-transform: translateY(20px);}
 /* ========== [.con active 실행] ========== */
@@ -53,39 +53,76 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .section .sec-con {position: absolute; width: 1170px; top: 50%; left: 50%; transform: translate(-50%, -50%); padding-bottom: 100px;}
 .section .sec-con > .con {padding-bottom: 60px;}
 
+/* ========== [#sec1] ========== */
+.section.main .bg {width: 100%; height: 100%; background: url(../img/intro/intro_bg.jpg) center center no-repeat / cover; position: relative; top: 30%; left: 50%; transform: translate(-50%, -30%); transition-property: width, height; transition-delay: 0.5s; transition-duration: 0.5s;}
+.section.main.active .bg {width: 70%; height: 400px;}
+.section.main .line {width: 1px; height: 0; position: absolute; left: 50%; bottom: 6%; transform: translate(-50%, 6%); transition: all 0.5s; transition-delay: 1s;}
+.section.main .line:after {content: ''; width: 1px; height: 0; position: absolute; top: 0; left: 0; background: #2d3031; transition: all 0.5s; transition-delay: 1s;}
+.section.main.active .line:after {height: 60px;}
+.section.main .con {position: absolute; left: 50%; bottom: -40%; transform: translate(-50%, 40%); }
+.section.main .slogan {max-width: 35%; margin: 150px auto; margin-bottom: 20px;}
+.section.main .tit > span {display: block; font-size: 14px; font-weight: 100; color: #777; margin-top: 20px;}
+.section.main.active .slogan {transition-delay: 1.7s;}
+.section.main.active .tit {transition-delay: 2s;}
+.section.main .intro_bt {position: absolute; text-align: center; overflow: hidden; left: 50%; bottom: 10%; transform: translate(-50%, -10%); -webkit-transform: translate(-50%, -10%); -moz-transform: translate(-50%, -10%); -o-transform: translate(-50%, -10%); -ms-transform: translate(-50%, -10%);}
+.section.main .intro_bt {
+    opacity: 0;
+    transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    -webkit-transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, -ms-transform, transform;
+    -webkit-duration: .7s;
+    -webkit-transition-timing-function: cubic-bezier(0,0,.2,1);
+    duration: .7s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+.section.main.active .intro_bt {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -10%);
+    -moz-transform: translate(-50%, -10%);
+    -o-transform: translate(-50%, -10%);
+    -ms-transform: translate(-50%, -10%);
+    transform: translate(-50%, -10%);
 
+    -webkit-transition-delay: 2.3s; 
+    -webkit-transition-duration: .5s; 
+    transition-delay: 2.3s; 
+    transition-duration: .5s;
+
+}
+.section.main .intro_bt h3 {font-family: 'Josefin Sans'; font-size: 30px; font-weight: normal;color: #222; }
+.section.main .intro_bt p {font-weight: 100; color: rgba(0,0,0,0.7); box-sizing: border-box; border-top: 2px solid #222; padding-top: 20px; margin-top: 10px;}
 
 /* ========== [#sec2] ========== */
-.section.page2 .slogan {color: #f8b418;}
+.section.intro .int_list {width: 100%; height: 400px; position: relative;}
+.section.intro .int_list > li {width: 304px; height: 400px; position: absolute; overflow: hidden; padding: 20px 0 0 30px; color: #fff; line-height: 30px;}
+.section.intro .int_list > li:first-child {top: 30%; left: 15%; background: url(../img/intro/box1.jpg)  center center no-repeat;}
+.section.intro .int_list > li:last-child {top: 10%; right: 13%; background: url(../img/intro/box2.jpg)  center center no-repeat;}
+
 
 /* ========== [#sec3] ========== */
-.section.page3 .slogan {color: #c40000;}
-.page3 .sec-con .busi-list {width: 100%; height:520px; overflow:hidden;}
-.page3 .sec-con .busi-list li {position: relative; float: left; width: 25%; height: 100%; overflow: hidden; transition: width 1s;}
-.page3 .sec-con .busi-list li.busi1 {background: url("../img/page3/business_img01.jpg") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi2 {background: url("../img/page3/business_img02.jpg") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi3 {background: url("../img/page3/business_img03.jpg") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi4 {background: url("../img/page3/business_img04.jpg") center center no-repeat;}
-.page3 .sec-con.active .busi-list li {width: 10.6666%;}
-.page3 .sec-con.active .busi-list li.active {width: 60%;}
-.page3 .sec-con .busi-list li .bg-black {position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 4; opacity: 0; background: rgba(255, 255, 255, 0.25); transition: opacity 500ms;}
-.page3 .sec-con.active .busi-list li .bg-black {opacity: 1;}
-.page3 .sec-con.active .busi-list li.active .bg-black {opacity: 0;}
-.page3 .sec-con .busi-list li .bg-hover {position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 100%; text-align: right; z-index: 5; opacity: 0; transition: opacity .5s .4s;}
-.page3 .sec-con.active .busi-list li.active .bg-hover {opacity:1;transition:none;}
-.page3 .sec-con .busi-list li .bg-hover img {position: absolute; right: -337px; top: 0; transition: all .9s;}
-.page3 .sec-con .busi-list li.active .bg-hover img { right: 0;}
-.page3 .sec-con .busi-list li.busi1 .bg-hover {background: url("../img/page3/business_img01_over.png") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi2 .bg-hover {background: url("../img/page3/business_img02_over.png") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi3 .bg-hover {background: url("../img/page3/business_img03_over.png") center center no-repeat;}
-.page3 .sec-con .busi-list li.busi4 .bg-hover {background: url("../img/page3/business_img04_over.png") center center no-repeat;}
-.page3 .sec-con .busi-list li .txtBox {font-size: 20px;}
-.page3 .sec-con .busi-list li .txtBox .txt {position: absolute; top: 50%; left: 50%; transform: rotate(0.0001deg) translate(-50%, -50%); z-index: 6; opacity: 1; transition: opacity 500ms .3s;}
-.page3 .sec-con.active .busi-list li .txtBox .txt {opacity: 0; transition: opacity 500ms;}
-.page3 .sec-con .busi-list li .txtBox .txt-hover {position: absolute; left: 50%; top: 50%; transform: rotate(0.0001deg) translate(-50%, -50%); z-index: 6; opacity: 0; transition: opacity 500ms, transform 500ms;}
-.page3 .sec-con .busi-list li .txtBox .txt-hover > span {display: block; margin: 10px 0;}
-.page3 .sec-con.active .busi-list li .txtBox .txt-hover {transition: opacity 500ms 0.2s; opacity: 1;}
-.page3 .sec-con.active .busi-list li.active .txtBox .txt-hover {transition: opacity 500ms 0; opacity: 0;}
+.business .sec-con .busi-list {width: 100%; height:520px; overflow:hidden;}
+.business .sec-con .busi-list li {position: relative; float: left; width: 33.33%; height: 100%; overflow: hidden; transition: width 1s;}
+.business .sec-con .busi-list li.busi1 {background: url("../img/business/business_img02.jpg") center center no-repeat;}
+.business .sec-con .busi-list li.busi2 {background: url("../img/business/business_img03.jpg") center center no-repeat;}
+.business .sec-con .busi-list li.busi3 {background: url("../img/business/business_img04.jpg") center center no-repeat;}
+.business .sec-con.active .busi-list li {width: 15.6666%;}
+.business .sec-con.active .busi-list li.active {width: 60%;}
+.business .sec-con .busi-list li .bg-black {position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 4; opacity: 0; background: rgba(255, 255, 255, 0.25); transition: opacity 500ms;}
+.business .sec-con.active .busi-list li .bg-black {opacity: 1;}
+.business .sec-con.active .busi-list li.active .bg-black {opacity: 0;}
+.business .sec-con .busi-list li .bg-hover {position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 100%; text-align: right; z-index: 5; opacity: 0; transition: opacity .5s .4s;}
+.business .sec-con.active .busi-list li.active .bg-hover {opacity:1;transition:none;}
+.business .sec-con .busi-list li .bg-hover img {width: auto !important; position: absolute; right: -337px; top: 0; transition: all .9s;}
+.business .sec-con .busi-list li.active .bg-hover img { right: 0;}
+.business .sec-con .busi-list li.busi1 .bg-hover {background: url("../img/business/business_img02_over.png") center center no-repeat;}
+.business .sec-con .busi-list li.busi2 .bg-hover {background: url("../img/business/business_img03_over.png") center center no-repeat;}
+.business .sec-con .busi-list li.busi3 .bg-hover {background: url("../img/business/business_img04_over.png") center center no-repeat;}
+.business .sec-con .busi-list li .txtBox {font-size: 20px;}
+.business .sec-con .busi-list li .txtBox .txt {font-size: 25px; letter-spacing: 5px; position: absolute; top: 50%; left: 50%; transform: rotate(0.0001deg) translate(-50%, -50%); z-index: 6; opacity: 1; transition: opacity 500ms .3s;}
+.business .sec-con.active .busi-list li .txtBox .txt {opacity: 0; transition: opacity 500ms;}
+.business .sec-con .busi-list li .txtBox .txt-hover {position: absolute; left: 50%; top: 50%; transform: rotate(0.0001deg) translate(-50%, -50%); z-index: 6; opacity: 0; transition: opacity 500ms, transform 500ms;}
+.business .sec-con .busi-list li .txtBox .txt-hover > span {display: block; margin: 10px 0;}
+.business .sec-con.active .busi-list li .txtBox .txt-hover {transition: opacity 500ms 0.2s; opacity: 1;}
+.business .sec-con.active .busi-list li.active .txtBox .txt-hover {transition: opacity 500ms 0; opacity: 0;}
 
 
 /* ========== [#sec4] ========== */
@@ -113,7 +150,7 @@ header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index:
 .section.news .news-list .nRight ul li {margin-bottom: 15px;}
 
 /* ========== [footer] ========== */
-#sec6 {background: #93979f; height: auto !important; padding: 50px 0;}
+#sec5 {background: #93979f; height: auto !important; padding: 50px 0;}
 .footer .footer_wrap {width: 1340px; margin: 0 auto;}
 .footer .footer_wrap > div {float: left;}
 .footer .footer_wrap .f_logo {width: 20%; margin-right: 50px;}
