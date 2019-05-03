@@ -1,94 +1,38 @@
-/**** header ****/
-#wrap {width: 100%; position: relative; overflow: hidden; word-break: keep-all;}
-#wrap .header {width: 100%; padding: 0 3%; position: fixed; top: 5%; z-index: 12;}
+/* ========== [header] ========== */
+header .logo {max-width: 250px; position: fixed; top: 50px; left: 50px; z-index: 5;}
+/** languege **/
+.languege {position: fixed; top: 40px; right: 50px; z-index: 5;}
+.languege li {float: left;margin-left: 20px;}
+.languege li a {color: rgba(0,0,0,0.5);transition: all 0.5s;}
+.languege li a:hover {text-decoration: underline;color: rgba(0,0,0,1)}
 
-/** menu toggle **/
-#bars {cursor: pointer; position: absolute; top: 0; left: 3%; width: 45px;}
-.bar {
-	width: 45px;
-	height: 7px;
-	background-color: #f9b419;
-	border-radius: 7px;
-	margin-bottom: 7px; 
-	transition: all .3s ease-in-out;
-}
-#bars.on .bar1 {transform: translate(0,14px) rotate(45deg);}
-#bars.on .bar2 {opacity: 0;}
-#bars.on .bar3 {transform: translate(0,-14px) rotate(-45deg);}
-#bars > p {color: #f9b419; font-weight: 500;}
-
-/** header top **/
-#wrap .header h2 .logo {max-width: 300px; display: block; position: absolute; left: 50%; transform: translateX(-50%);}
-#wrap .header .languege {position: absolute; top: 0; right: 3%; width: 97px; height: 16px;}
-#wrap .header .languege > div {display: inline-block; margin-left: 10px; font-size: 20px; cursor: pointer;}
-#wrap .header .languege > :first-child {color: #f9b419; font-weight: 500;}
+/** gnb **/
+.mainNavi {position: fixed; top: 50%; left: 10%; margin-top: -100px; z-index: 5; display: none;}
+.mainNavi a {display: block; height: 60px; font-size: 14px; font-weight: 500; color: #000; overflow: hidden; opacity: 0.8; transition: all 0.5s;}
+.mainNavi li:first-child {display: none;}
+.mainNavi .num {font-size: 16px; color: #f8b418; display: block;}
+.mainNavi .blank {display: block; width: 8px; height: 8px; border: 1px solid rgba(0,0,0,0.5); border-radius: 8px; margin: 0 auto ;}
 
 
 
 
-/**** main ****/
-#wrap .main {width: 100%; height: 100vh; position: relative; overflow: hidden;}
-#wrap .main .mainBox {width: 100%; height: 100%; position: relative;}
-#wrap .bg {width: 100%; height: 100%; background: url('../img/main/bg2.jpg') center center / cover no-repeat;}
+.section.main {background: #f8b418;}
+.section.main .outer {width: 100%; height: 100%; display: table; text-align: center;}
+.section.main .inner {width: 100%; height: 100%; display: table-cell; vertical-align: middle;}
+.section.main .slogan {font-size: 50px; color: #fff;}
 
-/** main 텍스트 **/
-#wrap .main .txtArea {width: 100%; position: absolute; top: 50%; transform: translateY(-50%); text-align: center; padding: 0 5%;}
-#wrap .main .slogan {
-    font-family: 'Noto Sans KR';
-    font-weight: 900;
-    font-size: 65px;
-    line-height: 75px;
-    color: #fff;
-    position: relative;
-    opacity: 0;
-    top: 35px;
-    transition: opacity .8s cubic-bezier(.55,0,.1,1), top .8s cubic-bezier(.55,0,.1,1);
-}
-#wrap .main .tit {
-    font-family: 'Noto Sans KR'; 
-    font-weight: 300;
-    font-size: 26px;
-    color: #fff;
-    margin-top: 25px !important;
-    position: relative;
-    opacity: 0;
-    top: -35px;
-    transition: opacity .8s cubic-bezier(.55,0,.1,1), top .8s cubic-bezier(.55,0,.1,1);
-}
-#wrap .bt_wrap {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-	bottom: 5%;
-	font-size: 20px;
-    color: #fff;
-    text-align: center;
-}
-/** main 텍스트 애니메이션 **/
-#wrap .txtArea.on .slogan {opacity: 1; top: 0;}
-#wrap .txtArea.on .tit {opacity: 1; top: 0;}
-
-#wrap .main .line {
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 1;
-}
-#wrap .main .line span {
-    width: 1px;
-    height: 0;
-    position: relative;
-    z-index: 1;
-    background: #fff;
-    display: block;
-}
-
-
-/**** mainCon ****/
-#wrap .mainCon {background: #fff; display: none;}
-#wrap .mainCon .siteInfo {width: 75%; margin: 0 auto; position: relative;}
-#wrap .mainCon .siteInfo .infoImg {width: 100%; position: relative; opacity: 0; z-index: 1;}
-#wrap .mainCon .info {margin-top: 150px; position: relative;}
+/* ========== [footer] ========== */
+#sec5 {background: #93979f; height: auto !important; padding: 50px 0;}
+.footer .footer_wrap {width: 1340px; margin: 0 auto;}
+.footer .footer_wrap > div {float: left;}
+.footer .footer_wrap .f_logo {width: 20%; margin-right: 50px;}
+.footer .footer_wrap .f_logo img {width: 100%;}
+.footer .footer_wrap .f_copy {width: 50%; color: #fff;}
+.footer .footer_wrap .f_copy > ul > li {float: left; margin-right: 20px;}
+.footer .footer_wrap .f_copy > ul > li > a {color: #fff;}
+.footer .footer_wrap .f_copy > ul > :nth  -child(odd):hover {text-decoration: underline;}
+.footer .footer_wrap .f_copy > p {font-size: 12px;}
+.footer .footer_wrap .f_site {width: 195px; height: 35px; line-height: 35px; padding-left: 10px; border: 1px solid #bbb; color: #e1e1e1; cursor: pointer; position: relative;}
+.f_site > .fa {float: right; padding-right: 10px; line-height: 35px; }
+.f_site > .site_list {display: none; border: 1px solid #bbb; border-bottom: 0; background: #93979f; padding-left: 10px; position: absolute; width: 101%; height: auto; top: -107px; left: -1px; box-sizing: border-box; z-index: 10;}
+.f_site > .site_list a {color: #fff;}
