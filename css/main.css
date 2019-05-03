@@ -1,96 +1,353 @@
-@charset "utf-8";
-/* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Righteous);
-
-/* base */
-body,ul,li,ol,dl,dt,dd,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
-body{font:normal 12px "맑은 고딕",Malgun Gothic,serif}
-ul{list-style:none;}
-img{border:0;vertical-align:top;}
-a{text-decoration:none;}
-table{border-collapse:collapse}
-
-/* header */
-header h1{position:fixed;top:50px;left:50px;z-index:5}
-header h1 img{width:200px;}
-
-/*sns*/
-.sns{position:fixed;top:40px;right:50px;z-index:5}
-.sns li{float:left;margin-left:20px;}
-.sns li a{color:rgba(0,0,0,0.5);transition:all 0.5s;}
-.sns li a:hover{text-decoration:underline;color:rgba(0,0,0,1)}
-
-.gnb{position:fixed;top:50%;left:0;margin-top:-100px;z-index:5}
-.gnb a{display:block;width:200px;height:60px;font-size:14px;color:#000;text-align:right;overflow:hidden;box-sizing:border-box;border-top:1px solid #111;opacity:0.8;transition:all 0.5s;font-family:righteous}
-.gnb li a:hover{font-size:20px;opacity:1;}
-.gnb li.on a{font-size:20px;opacity:1;}
-
-.gnb li:nth-child(1) a:hover{color:#d4164c;border-top:1px solid #d4164c;}
-.gnb li:nth-child(2) a:hover{color:#fff;border-top:1px solid #fff;}
-.gnb li:nth-child(3) a:hover{color:#ffec6a;border-top:1px solid #ffec6a;}
-.gnb li:nth-child(4) a:hover{color:#005a89;border-top:1px solid #005a89;}
-
-.gnb li:nth-child(1).on a{color:#d4164c;border-top:1px solid #d4164c;}
-.gnb li:nth-child(2).on a{color:#fff;border-top:1px solid #fff;}
-.gnb li:nth-child(3).on a{color:#ffec6a;border-top:1px solid #ffec6a;}
-.gnb li:nth-child(4).on a{color:#005a89;border-top:1px solid #005a89;}
-
-
-.dot_menu{position:fixed;top:50%;right:10px;width:8px;margin-top:-24px;z-index:5;}
-.dot_menu li a{display:block;width:8px;height:8px;border:1px solid rgba(0,0,0,0.5);border-radius:8px;}
-.dot_menu li{margin-bottom:8px;}
-.dot_menu li:first-child{margin-top:8px;}
-
-.dot_menu li:nth-child(1) a:hover{border:1px solid #d4164c;background:#d4164c}
-.dot_menu li:nth-child(2) a:hover{border:1px solid #fff;background:#fff}
-.dot_menu li:nth-child(3) a:hover{border:1px solid #ffec6a;background:#ffec6a}
-.dot_menu li:nth-child(4) a:hover{border:1px solid #005a89;background:#005a89}
-
-.dot_menu li:nth-child(1).on a{border:1px solid #d4164c;background:#d4164c}
-.dot_menu li:nth-child(2).on a{border:1px solid #fff;background:#fff}
-.dot_menu li:nth-child(3).on a{border:1px solid #ffec6a;background:#ffec6a}
-.dot_menu li:nth-child(4).on a{border:1px solid #005a89;background:#005a89}
+﻿@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
 
 
 
-/*section*/
-section{width:100%;height:500px;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;background-position:center;position:relative;overflow:hidden;}
+/* ICON STYLES - ICON FROM: http://fontastic.me/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.page1{background-image:url(../img/bg1.jpg)}
-.page2{background-image:url(../img/bg2.jpg)}
-.page3{background-image:url(../img/bg3.jpg)}
-.page4{background-image:url(../img/bg4.jpg)}
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("../fonts/untitled-font-1.eot");
+  src:url("../fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/untitled-font-1.woff") format("woff"),
+    url("../fonts/untitled-font-1.ttf") format("truetype"),
+    url("../fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-section>div{position:absolute;top:46%;left:300px;}
-section.page1>div p{color:#d4164c;font-family:righteous;font-size:30px;}
-section.page1>div span{color:#000;font-size:14px;}
-section.page2>div p{color:#fff;font-family:righteous;font-size:30px;}
-section.page2>div span{color:#000;font-size:14px;}
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: "untitled-font-1";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-section.page3>div p{color:#ffec6a;font-family:righteous;font-size:30px;}
-section.page3>div span{color:#000;font-size:14px;}
-section.page4>div p{color:#005a89;font-family:righteous;font-size:30px;}
-section.page5>div span{color:#000;font-size:14px;}
+.icon-up-open-big:after {
+  content: "a";
+  font-size: 2.5em;
+  display: block;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  color: black;
+  -webkit-transition: color .3s;
+          transition: color .3s;
+}
+
+.icon-up-open-big:hover:after {
+	color: white;	
+}
+
+.scroll-icon {
+	position: absolute;
+ 	left: 50%;
+  bottom: 30px;
+  padding: 0 10px;
+  	-webkit-transform: translateX(-50%);
+  	    -ms-transform: translateX(-50%);
+  	        transform: translateX(-50%);
+}
 
 
-/*첫 번째 박스 이미지*/
-.p11 { position:absolute; bottom:20px; right:20px;}
-.p12 { position:absolute; bottom:-40px; right:130px;}
-.p13 { position:absolute; top:180px; right:60px;}
 
-/*두 번째 박스 이미지*/
-.p21 { position:absolute; bottom:-480px; right:-180px;}
-.p22 { position:absolute; bottom:-40px; right:130px;}
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/*세 번째 박스 이미지 */
-.p31 { position:absolute; bottom:30px; right:180px;}
-.p32 { position:absolute; bottom:-270px; right:110px;}
-.p33 { position:absolute; bottom:-130px; right:-70px;}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
 
-/*네 번째 박스 이미지 */
-.p41 { position:absolute; bottom:-120px; right:20px;}
-.p42 { position:absolute; bottom:-180px; right:0px;}
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}
+
+.end {
+	margin-top: 30px;
+	font-size: 3em;
+	font-weight: bold;
+	opacity: 0;
+	-webkit-transform: translateY(300px);
+	    -ms-transform: translateY(300px);
+	        transform: translateY(300px);
+	-webkit-transition: opacity, -webkit-transform 1s;
+	        transition: opacity, transform 1s;
+	-webkit-transition-delay: 1s;
+	        transition-delay: 1s;
+}
 
 
 
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell {
+    height: auto !important;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Alegreya Sans', Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: black;
+	letter-spacing: .18em;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+
+
+/* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.header-top {
+	background: rgba(0, 47, 77, .3);
+	height: 70px;
+	padding: 0 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	box-sizing: border-box;
+}
+
+h1 {
+	line-height: 70px;
+	height: 70px;
+}
+
+h1 a {
+	display: block;
+	padding: 0 10px;
+}
+
+.toggle-menu {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+
+.toggle-menu i {
+	position: absolute;
+	display: block;
+	height: 2px;
+	background: white;
+	width: 30px;
+	left: 10px;
+	-webkit-transition: all .3s;
+	        transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+	top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+	top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+	top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+	top: 25px;
+	-webkit-transform: rotateZ(45deg);
+	        transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+	background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+	top: 25px;
+	-webkit-transform: rotateZ(-45deg);
+	        transform: rotateZ(-45deg);
+}
+
+nav {
+ 	height: 0;
+	opacity: 0;
+  box-sizing: border-box;
+	background: rgba(0, 47, 77, .25);
+	position: fixed;
+	top: 70px;
+	width: 100%;
+  -webkit-transition: all 3s;
+          transition: all 3s;
+}
+
+.open-menu ~ nav {
+	opacity: 1;
+ 	padding: 80px 0;
+	z-index: 15;
+	height: calc(90vh - 70px);
+}
+
+nav ul {
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+nav li {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+nav li a {
+	font-size: 2em;
+	display: block;
+	padding: 30px;
+	text-align: center;
+	-webkit-transition: background .3s;
+	        transition: background .3s;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+	background: #962D3E;
+}
+
+nav li:nth-child(even) a {
+	background: #aa3346;
+}
+
+nav li:nth-child(odd) a:hover {
+	background: #9e2f41;
+}
+
+nav li:nth-child(even) a:hover {
+	background: #c53c52;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #453659;
+}
+  
+
+
+/* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section { 
+	text-align: center;
+  /*background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;*/
+}
+
+h2 {
+	text-transform: lowercase;
+	font-size: 4em;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 2.8em;
+}
+
+
+
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+	background: white;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 -8px;
+	background: transparent;
+	box-sizing: border-box;
+	border: 1px solid #24221F;
+}
+
+
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 767px) {
+	nav ul {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
+	nav li {
+		margin-top: 1px;
+	}
+  
+  nav li a {
+    font-size: 1.5em;
+  }
+  
+  .scroll-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .open-menu ~ nav {
+		padding: 20px 0;
+	}
+
+	nav li a {
+		padding: 3px;
+	}
+}
 

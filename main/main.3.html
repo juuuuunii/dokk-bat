@@ -14,250 +14,224 @@
   <title>도깨비 방망이</title>
   <!-- css -->
   <link rel="stylesheet" href="../css/basic.css">
-  <link rel="stylesheet" href="../css/dokk_basic.3.css">
-  <link rel="stylesheet" href="../css/fullpage.css">
-  <link rel="stylesheet" href="../css/swiper.css">
+  <link rel="stylesheet" href="../css/dokk_basic.3.css"> 
   <!-- w3 -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- jquery -->
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/9B3A8931-4424-D84D-B892-BE27C6F1361C/main.js" charset="UTF-8"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
-  <script type="text/javascript"t src="../js/swiper.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9'></script>
   <script type="text/javascript" src="../js/prefixfree.min.js"></script>
-  <script type="text/javascript" src="../js/dokk_basic.3.js"></script>
+  
 
-  <!-- 마우스휠-->
-  <script src="../js/jquery.fullPage.min.js"></script>
 </head>
 
 <body>
-<div id="container" class="wrap">
 
-  <div id="main">
+  <header>
     <div class="topLogo"><img src="../img/common/top-logo.png" class="img" alt="도깨비방망이 로고"/></div>
     <div class="scroll"><div class="scroll-icon"></div></div>
-    <!-- Navi-->
-    <div class="mainNavi">
-      <ul>
-          <li><a href="#sec1">ABOUT US<div></div></a></li>
-          <li><a href="#sec2">VISION<div></div></a></li>
-          <li><a href="#sec3">BUSINESS<div></div></a></li>  
-          <li><a href="#sec4">CONTACT<div></div></a></li>  
-          <li id="menu-line"></li>
+
+    <nav>
+      <ul id="menu">
+        <li data-menuanchor="firstSection"><a href="#firstSection" title="First Section">ABOUT US<div></div></a></li>
+        <li data-menuanchor="secondSection"><a href="#secondSection" title="Second Section">VISION<div></div></a></li>
+        <li data-menuanchor="thirdSection"><a href="#thirdSection" title="Second Section">BUSINESS<div></div></a></li>
+        <li data-menuanchor="fourthSection"><a href="#fourthSection" title="Fourth Section">CONTACT<div></div></a></li>
       </ul>
-    </div>
+    </nav>
 
+  </header>
 
-    <!-- main-->
-    <div class="mainWrap fullpage-wrapper">
-      
-      
-      <!-- sec1-->
-      <div id="sec1" class="section fp-section fp-table main">
-        <div class="fp-tableCell">
-          <div class="secInner">
-            <div class="conBox">
-              <div class="conTop">DO <span id="typed" class="typed"></span> CREATE BORING THINGS.</div>
-              <div class="conBott">
-                지루하지 않은 기업문화<br/>
-                늘 새로운 프로젝트<br/>
-                우리는 도깨비방망이
-              </div>           
-            </div>
+  <div id="fullpage">
+
+    <section class="vertical-scrolling main">
+      <div class="secInner">
+          <div class="conBox">
+            <div class="conTop">DO <span id="typed" class="typed"></span> CREATE BORING THINGS.</div>
+            <div class="conBott">
+              지루하지 않은 기업문화<br/>
+              늘 새로운 프로젝트<br/>
+              우리는 도깨비방망이
+            </div>           
           </div>
         </div>
-      </div>
+    </section>
 
+    
+    <section class="vertical-scrolling vision">
+      <div class="secInner">
 
-      <!-- sec2-->
-      <div id="sec2" class="section fp-section fp-table vision">
-        <div class="fp-tableCell">
-          <div class="secInner">
-
-            <div class="conBox">
-              <div class="conTop">
-                  <ul class="clear">
-                    <li><div><img src="../img/page2/onlinemall.png" class="img" alt="온라인쇼핑"/></div></li>
-                    <li><div><img src="../img/page2/franchise.png" class="img" alt="프랜차이즈"/></div></li>
-                    <li><div><img src="../img/page2/flatform.png" class="img" alt="플랫폼"/></div></li>
-                    <li><div><img src="../img/page2/app.png" class="img" alt="어플리케이션"/></div></li>
-                  </ul>
-              </div>
-              <div class="conBott">
-                  <ul class="clear">
-                    <li>온라인쇼핑</li>
-                    <li>프랜차이즈</li>
-                    <li>플랫폼</li>
-                    <li>어플리케이션</li>
-                  </ul>
-              </div>
-              <p>
-                온라인 판매부터 IT플랫폼까지 행복한 사업 아이디어를 현실에 구현하고,<br/>
-                같은 아이디어도 지루하지 않게, 도깨비방망이만의 톡톡 튀는 감각으로 FUN하게!<br/>
-                행복한 삶을 위한 끝없는 연구를 진행합니다.
-              </p>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-
-
-      <!-- sec3-->
-      <div id="sec3" class="section fp-section fp-table business">
-        <div class="fp-tableCell">
-          <div class="secInner">
-            <div class="busiWrap">
-
-              <div class="busiBox mall clear"><a href="" target="_blank" titie="도깨비몰 바로가기">
-                <div class="busiImg"><div class="inner">
-                  <img src="../img/page3/dokk-mall.png" class="img" src="도깨비몰 로고"/>
-                </div></div>
-                <div class="busiName">도깨비몰</div>
-                <div class="busiCopy">
-                  <div class="inner">
-                    <span>도깨비방망이 자체 온라인몰</span>
-                    <span>자체 물류센터 운영</span>
-                    <span>자체 상품 개발</span>
-                  </div>
-                </div>
-              </a></div>
-
-              <div class="busiBox law clear"><a href="" target="_blank" titie="도깨비법률 바로가기">
-                <div class="busiImg"><div class="inner">
-                  <img src="../img/page3/dokk-law.png" class="img" src="도깨비법률 로고"/>
-                </div></div>
-                <div class="busiName">도깨비법률</div>
-                <div class="busiCopy">
-                  <div class="inner">
-                    <span>커뮤니티형 법률 플랫폼</span>
-                  </div>
-                </div>
-              </a></div>
-
-              <div class="busiBox cafe clear"><a href="" target="_blank" titie="도깨비퀵다방 바로가기">
-                <div class="busiImg"><div class="inner">
-                  <img src="../img/page3/dokk-cafe.png" class="img" src="도깨비퀵다방 로고"/>
-                </div></div>
-                <div class="busiName">도깨비퀵다방</div>
-                <div class="busiCopy">
-                  <div class="inner">
-                    <span>배달전문 테이크아웃 커피숍</span>
-                  </div>
-                </div>
-              </a></div>
-
-              <div class="busiBox black clear"><a href="" target="_blank" titie="블랙스퀘어 바로가기">
-                <div class="busiImg"><div class="inner">
-                  <img src="../img/page3/black-cafe.png" class="img" src="블랙스퀘어 로고"/>
-                </div></div>
-                <div class="busiName">블랙스퀘어</div>
-                <div class="busiCopy">
-                  <div class="inner">
-                    <span>매장형 프리미엄 커피숍</span>
-                  </div>
-                </div>
-              </a></div>
-
-              <div class="busiBox soon">
-                <div class="inner">
-                  COMING<br/>
-                  SOON<br/>
-                  ...
-                </div>
-              </div>
-
-            </div>
-            
-
-            
-            
-
-          </div>
-        </div>
-      </div>
-
-      <!-- sec4-->
-      <div id="sec4" class="section fp-section fp-table sns">
-        <div class="fp-tableCell">
-          <div class="secInner">
-
-             <div class="conBox">
-                <div class="conTop">help@dokk-bat.com</div>
-                <div class="conBott">
-                  
-                    <ul>
-                      <p>SNS</p>
-                      <li class="facebook"><a href="https://www.facebook.com/dokkmallcom/" target="_blank" title="페이스북 바로가기">
-                        <img src="../img/page4/facebook.png" class="img" alt="페이스북 로고"/>
-                      </a></li>
-                      <li class="insta"><a href="https://www.instagram.com/dokkmallcom/" target="_blank" title="인스타그램 바로가기">
-                        <img src="../img/page4/instagram.png" class="img" alt="인스타그램 로고"/>
-                      </a></li>
-                      <li class="youtube"><a href="https://www.youtube.com/channel/UCJtUIHklatYxvFc0Yj_F9Iw" target="_blank" title="유투브 바로가기">
-                        <img src="../img/page4/youtube.png" class="img" alt="유투브 로고"/>
-                      </a></li>
-                      <li class="blog"><a href="https://blog.naver.com/dokkkr/221502989123" target="_blank" title="블로그 바로가기">
-                        <img src="../img/page4/blog.png" class="img" alt="블로그 로고"/>
-                      </a></li>
-
-                    </ul>
-                </div>
-              </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- sec5-->
-      <div id="sec5" class="section fp-auto-height fp-section footer">
-        <div class="footer_wrap clear">
-
-          <div class="f_Left">
-            <div class="f_logo"><a href="#" target="_self" title="바로가기"><img src="../img/common/foot-logo.png" class="img" alt="도깨비방망이 로고"/></a></div>
-            <div class="f_copy">
-              <P>
-                대표 : 김영수 ㅣ 사업자등록번호 : 532-88-00091<br/>
-                (06640) 서울 서초구 서초중앙로64, 3층 (대영빌딩)<br/>
-                T : 1800-6197 ㅣ F : 070-4866-0993
-              </P>
+        <div class="conBox">
+          <div class="conTop">
               <ul class="clear">
-                <li><a href="" target="_slef" title="바로가기">이용약관</a></li>
-                <li>|</li>
-                <li><a href="" target="_slef" title="바로가기">개인정보처리방침</a></li>
-                <li>|</li>
-                <li><a href="" target="_slef" title="바로가기">이메일무단수집거부</a></li>
+                <li><img src="../img/page2/onlinemall.png" class="img" alt="온라인쇼핑"/></li>
+                <li><img src="../img/page2/franchise.png" class="img" alt="프랜차이즈"/></li>
+                <li><img src="../img/page2/flatform.png" class="img" alt="플랫폼"/></li>
+                <li><img src="../img/page2/app.png" class="img" alt="어플리케이션"/></li>
               </ul>
-            </div>
           </div>
-
-          <div class="f_right">
-            <div class="f_site">
-              Family Site <i class="fa fa-angle-up"></i>
-              <ul class="site_list">
-                <li><a href="#" target="_blank" title="도꺠비몰 바로가기">도깨비몰</a></li>
-                <li><a href="#" target="_blank" title="도꺠비퀵다방 바로가기">도깨비퀵다방</a></li>
-                <li><a href="#" target="_blank" title="도꺠비법률 바로가기">도깨비법률</a></li>
+          <div class="conBott">
+              <ul class="clear">
+                <li>온라인쇼핑</li>
+                <li>프랜차이즈</li>
+                <li>플랫폼</li>
+                <li>어플리케이션</li>
               </ul>
-            </div>
-            <p>
-              Copyright © 주식회사 도깨비방망이.<br/>
-              All Rights Reserved
-            </p>
           </div>
-          
-
+          <p>
+            온라인 판매부터 IT플랫폼까지 행복한 사업 아이디어를 현실에 구현하고,<br/>
+            같은 아이디어도 지루하지 않게, 도깨비방망이만의 톡톡 튀는 감각으로 FUN하게!<br/>
+            행복한 삶을 위한 끝없는 연구를 진행합니다.
+          </p>
         </div>
+        
       </div>
+    </section>
 
-    </div>
+    
+    <section class="vertical-scrolling business">
+      <div class="secInner">
+        <div class="busiWrap">
 
-</div>
+          <div class="busiBox mall clear"><a href="" target="_blank" titie="도깨비몰 바로가기">
+            <div class="busiImg"><div class="inner">
+              <img src="../img/page3/dokk-mall.png" class="img" src="도깨비몰 로고"/>
+            </div></div>
+            <div class="busiName">도깨비몰</div>
+            <div class="busiCopy">
+              <div class="inner">
+                <span>도깨비방망이 자체 온라인몰</span>
+                <span>자체 물류센터 운영</span>
+                <span>자체 상품 개발</span>
+              </div>
+            </div>
+          </a></div>
 
+          <div class="busiBox law clear"><a href="" target="_blank" titie="도깨비법률 바로가기">
+            <div class="busiImg"><div class="inner">
+              <img src="../img/page3/dokk-law.png" class="img" src="도깨비법률 로고"/>
+            </div></div>
+            <div class="busiName">도깨비법률</div>
+            <div class="busiCopy">
+              <div class="inner">
+                <span>커뮤니티형 법률 플랫폼</span>
+              </div>
+            </div>
+          </a></div>
 
+          <div class="busiBox cafe clear"><a href="" target="_blank" titie="도깨비퀵다방 바로가기">
+            <div class="busiImg"><div class="inner">
+              <img src="../img/page3/dokk-cafe.png" class="img" src="도깨비퀵다방 로고"/>
+            </div></div>
+            <div class="busiName">도깨비퀵다방</div>
+            <div class="busiCopy">
+              <div class="inner">
+                <span>배달전문 테이크아웃 커피숍</span>
+              </div>
+            </div>
+          </a></div>
+
+          <div class="busiBox black clear"><a href="" target="_blank" titie="블랙스퀘어 바로가기">
+            <div class="busiImg"><div class="inner">
+              <img src="../img/page3/black-cafe.png" class="img" src="블랙스퀘어 로고"/>
+            </div></div>
+            <div class="busiName">블랙스퀘어</div>
+            <div class="busiCopy">
+              <div class="inner">
+                <span>매장형 프리미엄 커피숍</span>
+              </div>
+            </div>
+          </a></div>
+
+          <div class="busiBox soon">
+            <div class="inner">
+              COMING<br/>
+              SOON<br/>
+              ...
+            </div>
+          </div>
+
+        </div>    
+
+      </div>
+    </section>
+
+    <section class="vertical-scrolling sns">
+      <div class="secInner">
+
+        <div class="conBox">
+            <div class="conTop">help@dokk-bat.com</div>
+            <div class="conBott">
+              
+                <ul>
+                  <p>SNS</p>
+                  <li class="facebook"><a href="https://www.facebook.com/dokkmallcom/" target="_blank" title="페이스북 바로가기">
+                    <img src="../img/page4/facebook.png" class="img" alt="페이스북 로고"/>
+                  </a></li>
+                  <li class="insta"><a href="https://www.instagram.com/dokkmallcom/" target="_blank" title="인스타그램 바로가기">
+                    <img src="../img/page4/instagram.png" class="img" alt="인스타그램 로고"/>
+                  </a></li>
+                  <li class="youtube"><a href="https://www.youtube.com/channel/UCJtUIHklatYxvFc0Yj_F9Iw" target="_blank" title="유투브 바로가기">
+                    <img src="../img/page4/youtube.png" class="img" alt="유투브 로고"/>
+                  </a></li>
+                  <li class="blog"><a href="https://blog.naver.com/dokkkr/221502989123" target="_blank" title="블로그 바로가기">
+                    <img src="../img/page4/blog.png" class="img" alt="블로그 로고"/>
+                  </a></li>
+
+                </ul>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    
+    <section class="vertical-scrolling fp-auto-heigh footer">
+      <div class="footer_wrap clear">
+
+        <div class="f_Left">
+          <div class="f_logo"><a href="#" target="_self" title="바로가기"><img src="../img/common/foot-logo.png" class="img" alt="도깨비방망이 로고"/></a></div>
+          <div class="f_copy">
+            <P>
+              대표 : 김영수 ㅣ 사업자등록번호 : 532-88-00091<br/>
+              (06640) 서울 서초구 서초중앙로64, 3층 (대영빌딩)<br/>
+              T : 1800-6197 ㅣ F : 070-4866-0993
+            </P>
+            <ul class="clear">
+              <li><a href="" target="_slef" title="바로가기">이용약관</a></li>
+              <li>|</li>
+              <li><a href="" target="_slef" title="바로가기">개인정보처리방침</a></li>
+              <li>|</li>
+              <li><a href="" target="_slef" title="바로가기">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="f_right">
+          <div class="f_site">
+            Family Site <i class="fa fa-angle-up"></i>
+            <ul class="site_list">
+              <li><a href="#" target="_blank" title="도꺠비몰 바로가기">도깨비몰</a></li>
+              <li><a href="#" target="_blank" title="도꺠비퀵다방 바로가기">도깨비퀵다방</a></li>
+              <li><a href="#" target="_blank" title="도꺠비법률 바로가기">도깨비법률</a></li>
+            </ul>
+          </div>
+          <p>
+            Copyright © 주식회사 도깨비방망이.<br/>
+            All Rights Reserved
+          </p>
+        </div>
+        
+
+      </div>
+    </section>
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="../js/dokk_basic.3.js"></script>
 </body>
 </html> 
